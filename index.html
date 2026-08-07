@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1 id="title">Personal Finance Dashboard</h1>
+        <div class="metrics-row">
+            <div class="score-card">
+                <span>Total Balance</span>
+                <h2 id="total-balance">$0.00</h2>
+            </div>
+            <div class="score-card">
+                <span>Net Income</span>
+                <h2 id="net-income">$0.00</h2>
+            </div>
+            <div class="score-card">
+                <span>Net Expenses</span>
+                <h2 id="net-expenses">$0.00</h2>
+            </div>
+        </div>
+        <div class="workspace-grid">
+            <section>
+                <h3>Add New Transaction</h3>
+                <form action="" id="finance-form">
+                    <label for="transaction-name">Transaction Name</label>
+                    <input type="text" id="transaction-name" placeholder="ex.Groceries" required>
+                    <label for="transaction-type">Transaction Type</label>
+                    <select name="transaction-type" id="transaction-type" required>
+                        <option value="income">Income(+)</option>
+                        <option value="expense">Expense(-)</option>
+                    </select>
+                    <label for="transaction-amount">Transaction Amount</label>
+                    <input type="number" step="0.01" required min="0.01" id="transaction-amount">
+                    <button type="submit" id="button">Log Transaction</button>
+
+                </form>
+            </section>
+            <section>
+                <h3>Transaction History Ledger</h3>
+                <ul id="transaction-list"></ul>
+            </section>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    
+</body>
+</html>
